@@ -1,0 +1,24 @@
+#back-to-top {
+    z-index: 99;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    // display: none;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  .back-to-top .icons {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  .back-to-top:hover {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .back-to-top:hover .icons {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
