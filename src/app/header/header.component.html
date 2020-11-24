@@ -1,0 +1,62 @@
+<header id="topnav" class="defaultscroll fixed-top" [ngClass]="{'notMain': changeNavbarColor}">
+  <div class="container">
+      <!-- Logo container-->
+      <div>
+          <a class="logo" href="index.html">
+              <img [src]="logoSrc" height="24" alt="">
+              <!-- <img *ngIf="!changeNavbarColor" src="assets/images/logo-light.png" class="l-light" height="24" alt=""> -->
+          </a>
+      </div>                 
+      <div class="buy-button">
+          <a href="https://1.envato.market/4n73n" target="_blank">
+              <div class="btn btn-primary login-btn-primary">Buy Now</div>
+              <div class="btn btn-light login-btn-light">Buy Now</div>
+          </a>
+      </div><!--end login button-->
+      <!-- End Logo container-->
+      <div class="menu-extras">
+          <div class="menu-item">
+              <!-- Mobile menu toggle-->
+              <a class="navbar-toggle">
+                  <div class="lines">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </a>
+              <!-- End mobile menu toggle-->
+          </div>
+      </div>
+
+      <div id="navigation">
+          <!-- Navigation Menu-->   
+          <ul class="navigation-menu nav-light">
+              <li><a [routerLink]="['/']" routerLinkActive="router-link-active" >Home</a></li>
+              <li class="has-submenu">
+                  <a href="javascript:void(0)">About Us</a><span class="menu-arrow"></span>
+                  <ul class="submenu megamenu">
+                      <li>
+                          <ul>
+                              <li><a [routerLink]="['about-us']" routerLinkActive="router-link-active" >About Us</a></li>
+                              <li><a routerLink="history">History</a></li>
+                              <li><a href="index-agency.html">Team</a></li>
+                          </ul>
+                      </li> 
+                  </ul>
+              </li>
+              <li class="has-submenu">
+                  <a routerLink="services">Services</a>
+              </li>
+              <li class="has-submenu">
+                  <a routerLink="portfolio">Portfolio</a>
+              </li>
+              <li class="has-submenu">
+                  <a href="javascript:void(0)">Contact</a>
+              </li>
+          </ul><!--end navigation menu-->
+          <div class="buy-menu-btn d-none">
+              <a href="https://1.envato.market/4n73n" target="_blank" class="btn btn-primary">Buy Now</a>
+          </div><!--end login button-->
+      </div><!--end navigation-->
+  </div><!--end container-->
+</header><!--end header-->

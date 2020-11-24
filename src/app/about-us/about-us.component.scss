@@ -1,0 +1,43 @@
+
+@import '../home/home.component.scss';
+ 
+.bg-overlay {
+    background-color: rgba(60, 72, 88, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+.nav-pills {
+    margin-bottom: 15px;
+    background: #f4f6fa;
+  }
+  
+  .nav-pills .nav-link {
+    color: #495057 !important;
+    padding: 5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-pills .nav-link.nav-link-alt {
+    color: #ffffff !important;
+  }
+  
+  .nav-pills .nav-link.nav-link-alt.active {
+    background: #3c4858 !important;
+  }
+  
+  .nav-pills .nav-link.active {
+    background: #2f55d4;
+    color: #ffffff !important;
+  }
+  
+  .nav-pills .nav-link.active .tab-para {
+    color: rgba(255, 255, 255, 0.65) !important;
+  }

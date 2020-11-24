@@ -1,0 +1,104 @@
+
+.main-icon {
+    border: 2px solid #e9ecef;
+    height: 40px;
+    width: 40px;
+    line-height: 0;
+    text-align: center;
+  }
+  
+  .main-icon .fea {
+    height: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .main-icon {
+      margin: 0 auto;
+    }
+  }
+
+  .timeline-page:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 95%;
+    margin: auto;
+    width: 2px;
+    background-color: #e9ecef !important;
+  }
+  
+  .timeline-page .timeline-item .date-label-left, .timeline-page .timeline-item .duration-right {
+    margin-right: 15px;
+  }
+  
+  .timeline-page .timeline-item .date-label-left:after, .timeline-page .timeline-item .duration-right:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+    background-color: #2f55d4;
+    border-radius: 4px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  
+  .timeline-page .timeline-item .date-label-left {
+    float: right;
+    margin-right: 15px;
+  }
+  
+  .timeline-page .timeline-item .date-label-left:after {
+    right: -37px;
+  }
+  
+  .timeline-page .timeline-item .duration-right {
+    float: left;
+    margin-left: 15px;
+  }
+  
+  .timeline-page .timeline-item .duration-right:after {
+    left: -37px;
+  }
+  
+  .timeline-page .timeline-item .event {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  
+  .timeline-page .timeline-item .event.event-description-right {
+    margin-left: 15px;
+  }
+  
+  .timeline-page .timeline-item .event.event-description-left {
+    margin-right: 15px;
+    text-align: right;
+  }
+  
+  @media (max-width: 767px) {
+    .timeline-page {
+      margin-left: 18px;
+    }
+    .timeline-page:after {
+      margin: 0;
+    }
+    .timeline-page .timeline-item .duration {
+      float: left !important;
+      margin: 0 0 30px 15px !important;
+      text-align: left !important;
+    }
+    .timeline-page .timeline-item .duration:after {
+      left: -21px !important;
+    }
+    .timeline-page .timeline-item .duration .event {
+      text-align: left !important;
+      margin-left: 15px;
+    }
+    .timeline-page .timeline-item .event-description-left {
+      text-align: left !important;
+      margin: 0 0 0 15px;
+    }
+  }  
