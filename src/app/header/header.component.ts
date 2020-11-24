@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 declare var $: any;
@@ -11,8 +12,9 @@ declare var $: any;
 export class HeaderComponent implements OnInit {
   changeNavbarColor = false;
   logoSrc = 'assets/images/logo-light.png';
+  addButton = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
     router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         if (this.router.url !== '/') {
@@ -26,19 +28,29 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (!this.changeNavbarColor) {
+      if (document.body.scrollTop > 40 ||     
+      document.documentElement.scrollTop > 40) {
+        document.getElementById('buyButton').classList.add('btn-primary');
+        this.logoSrc = 'assets/images/logo-dark.png';
+        // document.getElementById('paragraph').classList.add('green');
+      } else {
+        document.getElementById('buyButton').classList.remove('btn-primary');
+        this.logoSrc = 'assets/images/logo-light.png';
+      }
+    }
+  }
+
   ngOnInit(): void {
     $(function () {
       $(document).scroll(function () {
         var $nav = $('#topnav');
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-        console.log('hi', $(this).scrollTop() > $nav.height())
-        if ($(this).scrollTop() > $nav.height()) {
-          this.logoSrc = 'assets/images/logo-dark.png';
-          console.log(this.logoSrc);
-        } else {
-          this.logoSrc = 'assets/images/logo-light.png';
-        }
       });
     });
+
+
   }
 }
