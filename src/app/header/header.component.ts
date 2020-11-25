@@ -44,6 +44,34 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    // Menu
+    $('.navbar-toggle').on('click', function (event) {
+      $(this).toggleClass('open');
+      $('#navigation').slideToggle(400);
+    });
+
+    $('.navigation-menu>li').slice(-1).addClass('last-elements');
+
+    $('.menu-arrow,.submenu-arrow').on('click', function (e) {
+      if ($(window).width() < 992) {
+        e.preventDefault();
+        $(this)
+          .parent('li')
+          .toggleClass('open')
+          .find('.submenu:first')
+          .toggleClass('open');
+      }
+    });
+
+    $('.navigation-menu a').each(function () {
+      if (this.href == window.location.href) {
+        $(this).parent().addClass('active');
+        $(this).parent().parent().parent().addClass('active');
+        $(this).parent().parent().parent().parent().parent().addClass('active');
+      }
+    });
+    
     $(function () {
       $(document).scroll(function () {
         var $nav = $('#topnav');

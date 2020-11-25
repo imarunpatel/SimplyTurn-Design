@@ -92,9 +92,9 @@ p {
   color: #3c4858 !important;
 }
 
-#topnav .logo .l-dark {
-  display: none;
-}
+// #topnav .logo .l-dark {
+//   display: none;
+// }
 
 #topnav .logo .l-light {
   display: inline-block;
@@ -1147,7 +1147,7 @@ p {
 .btn-light {
   background-color: #f8f9fc;
   border: 1px solid #f8f9fc;
-  color: #ffffff;
+  color: #ffffff !important;
   -webkit-box-shadow: 0 3px 5px 0 rgba(248, 249, 252, 0.3);
   box-shadow: 0 3px 5px 0 rgba(248, 249, 252, 0.3);
 }
