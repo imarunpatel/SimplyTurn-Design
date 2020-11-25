@@ -5,6 +5,7 @@ import { HistoryComponent } from './about-us/history/history.component';
 import { TeamComponent } from './about-us/team/team.component';
 import { HomeComponent } from './home/home.component';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { PortfolioDetailsComponent } from './portfolio/portfolio-details/portfolio-details.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'services', component: OurServicesComponent },
   { path: 'portfolio', component: PortfolioComponent },
+  { path: 'portfolio-details', component: PortfolioDetailsComponent }
 ];
 
 @NgModule({

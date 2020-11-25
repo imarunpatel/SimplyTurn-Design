@@ -11,6 +11,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { HistoryComponent } from './about-us/history/history.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TeamComponent } from './about-us/team/team.component';
+import { PortfolioDetailsComponent } from './portfolio/portfolio-details/portfolio-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TeamComponent } from './about-us/team/team.component';
     OurServicesComponent,
     HistoryComponent,
     PortfolioComponent,
-    TeamComponent
+    TeamComponent,
+    PortfolioDetailsComponent
   ],
   imports: [
     BrowserModule,
