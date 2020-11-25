@@ -71,7 +71,7 @@ export class HeaderComponent implements OnInit {
         $(this).parent().parent().parent().parent().parent().addClass('active');
       }
     });
-    
+
     $(function () {
       $(document).scroll(function () {
         var $nav = $('#topnav');

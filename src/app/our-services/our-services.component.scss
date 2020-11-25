@@ -149,3 +149,12 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+
+  @media (max-width: 768px) {
+
+    .features {
+      .image {
+        margin-left: 40%;
+      }
+    }
+  }
