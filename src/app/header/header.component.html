@@ -32,13 +32,13 @@
       <div id="navigation">
           <!-- Navigation Menu-->   
           <ul class="navigation-menu nav-light">
-              <li><a [routerLink]="['/']" routerLinkActive="router-link-active" >Home</a></li>
+              <li><a [routerLink]="['/']" >Home</a></li>
               <li class="has-submenu">
                   <a href="javascript:void(0)">About Us</a><span class="menu-arrow"></span>
                   <ul class="submenu megamenu">
                       <li>
                           <ul>
-                              <li><a [routerLink]="['about-us']" routerLinkActive="router-link-active" >About Us</a></li>
+                              <li><a [routerLink]="['about-us']" >About Us</a></li>
                               <li><a routerLink="history">History</a></li>
                               <li><a routerLink="team">Team</a></li>
                           </ul>
@@ -46,13 +46,13 @@
                   </ul>
               </li>
               <li class="has-submenu">
-                  <a routerLink="services"  class="link-active">Services</a>
+                  <a routerLink="services">Services</a>
               </li>
               <li class="has-submenu">
                   <a routerLink="portfolio">Portfolio</a>
               </li>
               <li class="has-submenu">
-                  <a href="javascript:void(0)">Contact</a>
+                  <a routerLink="contact-us">Contact</a>
               </li>
           </ul><!--end navigation menu-->
           <div class="buy-menu-btn d-none">
